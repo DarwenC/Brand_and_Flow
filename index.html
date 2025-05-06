@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="CortezFlow" />
+  <meta name="description" content="Premium web design by CortezFlow">
+  <title>CortezFlow – Premium Web Design</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0e0e0e;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    section {
+      padding: 80px 5%;
+    }
+
+    /* Header */
+    header {
+      background: #121212;
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #2c2c2c;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav a {
+      margin-left: 25px;
+      font-weight: 300;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(to right, #121212, #1e1e1e);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 90vh;
+      text-align: left;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+    .btn {
+      background: #ffd700;
+      color: #121212;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* Services */
+    .services {
+      background: #1a1a1a;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+    .service-box {
+      background: #222;
+      padding: 30px;
+      border-radius: 16px;
+      transition: transform 0.3s ease;
+    }
+    .service-box:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Portfolio */
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .portfolio img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: #111;
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* Contact */
+    .contact {
+      background: #1e1e1e;
+      text-align: center;
+    }
+    .contact a {
+      display: inline-block;
+      margin-top: 20px;
+      background: #ffd700;
+      padding: 12px 30px;
+      border-radius: 40px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">CortezFlow</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Luxury Websites for Bold Brands</h1>
+    <p>High-end design. Strategic layout. Speed, style, and structure built to impress and convert.</p>
+    <a href="#contact" class="btn">Work With Me</a>
+  </section>
+
+  <section id="services">
+    <h2>What I Offer</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>Custom Websites</h3>
+        <p>Fully tailored builds for businesses that want to stand out online.</p>
+      </div>
+      <div class="service-box">
+        <h3>Domain & Setup</h3>
+        <p>Let me handle everything from domain registration to site launch.</p>
+      </div>
+      <div class="service-box">
+        <h3>Ongoing Support</h3>
+        <p>Need edits, updates, or monthly care? I've got your back post-launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Featured Work</h2>
+    <div class="portfolio">
+      <img src="assets/images/site1.jpg" alt="Sample site 1">
+      <img src="assets/images/site2.jpg" alt="Sample site 2">
+      <img src="assets/images/site3.jpg" alt="Sample site 3">
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Client Love</h2>
+    <p>“CortezFlow turned my brand into a luxury experience. My website finally reflects my business.”<br>– Real Client</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Let’s Build Something Beautiful</h2>
+    <p>Tell me your vision. I’ll bring it to life.</p>
+    <a href="mailto:cortezflowweb@gmail.com">Get in Touch</a>
+  </section>
+
+  <footer>
+    © 2025 CortezFlow. All rights reserved.
+  </footer>
+
+</body>
+</html>
