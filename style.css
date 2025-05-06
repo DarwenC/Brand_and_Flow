@@ -1,12 +1,13 @@
-/* Brand&Form – style.css */
-
+/* === BASE STYLES === */
 :root {
   --font-serif: 'Cormorant Garamond', serif;
   --font-sans: 'Outfit', sans-serif;
+
   --color-bg: #fdfaf6;
   --color-text: #3c2f2f;
   --color-accent: #b58e6f;
   --color-light: #fffaf4;
+  --color-muted: #6a5e5e;
   --color-fade: #a57759;
 }
 
@@ -20,50 +21,87 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  background: url('https://www.transparenttextures.com/patterns/beige-paper.png');
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 1200px;
   padding: 2rem;
+  margin: 0 auto;
+}
+
+/* === HEADER === */
+.site-header {
+  background: url('https://www.transparenttextures.com/patterns/beige-paper.png');
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 2rem 0;
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.logo {
-  font-family: var(--font-serif);
-  font-size: 2.5rem;
-  color: var(--color-text);
-}
-
-nav {
-  display: flex;
-  gap: 2rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--color-text);
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: var(--color-accent);
-}
-
-.hero {
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)),
-    url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-  background-size: cover;
-  padding: 8rem 2rem;
   text-align: center;
 }
 
-.hero h1 {
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.initials {
+  font-size: 2.75rem;
+  color: var(--color-accent);
   font-family: var(--font-serif);
-  font-size: 3.5rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  position: relative;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* === HERO === */
+.hero {
+  background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.95)), url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
   margin-bottom: 1rem;
   animation: fadeInUp 1s ease-in-out;
 }
@@ -72,15 +110,15 @@ nav a:hover {
   font-size: 1.25rem;
   max-width: 700px;
   margin: 0 auto 2rem;
+  color: var(--color-muted);
   animation: fadeInUp 1.5s ease-in-out;
 }
 
 .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
   background: var(--color-accent);
   color: white;
-  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s ease;
@@ -91,28 +129,101 @@ nav a:hover {
   background: var(--color-fade);
 }
 
+/* === SECTION STYLES === */
 section {
-  padding: 6rem 2rem;
+  padding: 5rem 0;
 }
 
-.intro {
-  max-width: 1000px;
-  margin: 0 auto;
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* === SERVICES === */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-box {
+  background: var(--color-light);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+/* === PORTFOLIO === */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
   text-align: center;
 }
 
-.intro h2 {
-  font-family: var(--font-serif);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.portfolio-item {
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
 }
 
-.intro p {
+/* === PROCESS === */
+.process-steps {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.process-steps li {
+  margin-bottom: 1.5rem;
   font-size: 1.1rem;
-  color: #5e4b4b;
 }
 
-/* Animations */
+/* === FAQ === */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.faq-item h4 {
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+}
+
+/* === ABOUT === */
+.about p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+/* === CONTACT === */
+.contact p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* === FOOTER === */
+.footer {
+  background: #f8f5f2;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #7a6e6e;
+}
+
+/* === ANIMATIONS === */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
