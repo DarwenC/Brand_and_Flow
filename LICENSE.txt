@@ -1,9 +1,18 @@
 Copyright © 2025 CortezFlow. All rights reserved.
 
-This project and all associated files are the intellectual property of CortezFlow (DwonK C.). 
+This project and all associated files are the intellectual property of CortezFlow (DwonK C.).
 
-Unauthorized use, copying, modification, distribution, or commercial exploitation of any part of this project is strictly prohibited.
+This license prohibits any unauthorized use of the materials contained within this repository. That includes, but is not limited to:
 
-This repository is intended for internal or client-specific use by CortezFlow only. It may not be forked, reused, resold, or adapted without explicit written permission.
+- Copying
+- Redistribution
+- Forking
+- Commercial or non-commercial reuse
+- Modification for public or private projects
 
-To request usage rights, licensing, or collaboration, contact: cortezflowweb@gmail.com
+This repository is intended for internal development, private business use, and direct client projects managed by CortezFlow only.
+
+Anyone found copying, duplicating, or distributing this work without written permission will be subject to legal action under applicable intellectual property laws.
+
+To inquire about licensing rights, collaboration, or authorized usage:
+📧 Email: cortezflowweb@gmail.com
