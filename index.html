@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brand&Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,30 +28,49 @@
       <p>From clean code to powerful design — we build brands that connect and convert.</p>
     </section>
 
-    <section class="features">
-      <div class="feature">
+    <section class="zigzag">
+      <div class="zig left">
         <h3>Web Design & Development</h3>
         <p>Secure, scalable, and modern websites. Optimized for performance and user experience.</p>
       </div>
-      <div class="feature">
-        <h3>Logo & Graphic Branding</h3>
-        <p>Timeless visual identities. Your brand, reimagined through clean and meaningful design.</p>
+      <div class="zig right">
+        <h3>Logo & Branding</h3>
+        <p>Visual identity that resonates. Your brand deserves clarity, strategy, and polish.</p>
       </div>
-      <div class="feature">
-        <h3>Online Consultations</h3>
-        <p>Let’s bring your vision to life. Schedule a virtual consult with our creative experts.</p>
+      <div class="zig left">
+        <h3>Online Consulting</h3>
+        <p>Creative guidance tailored to your goals. Book your first session today.</p>
       </div>
     </section>
 
     <section class="cta">
-      <h2>Ready to Build Your Brand?</h2>
-      <p>Contact us today to start your design journey with Brand&Form.</p>
-      <a href="#" class="cta-button">Get in Touch</a>
+      <h2>Let’s Launch Something Great</h2>
+      <p>Message us today to get started with Brand&Form.</p>
+      <a href="#" class="cta-button">Contact Now</a>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Brand&Form. All rights reserved.</p>
-  </footer>
+  <!-- Promo Banner -->
+  <div class="promo-banner">
+    <div class="promo-text">
+      ✨ Free Design Consults This Week Only — Let’s Build Something Clean. | 📞 Contact: hello@brandform.io
+    </div>
+  </div>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const zigs = document.querySelectorAll('.zig');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    zigs.forEach(box => {
+      observer.observe(box);
+    });
+  </script>
 </body>
 </html>
