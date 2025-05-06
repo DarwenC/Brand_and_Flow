@@ -1,0 +1,25 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor & temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# VS Code settings (optional, if using)
+.vscode/
+
+# Node modules (if you add JavaScript tooling later)
+node_modules/
+
+# Environment variables (for future use or email/API keys)
+.env
+
+# macOS folder
+__MACOSX/
+
+# Cache folders
+.cache/
