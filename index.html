@@ -4,80 +4,141 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brand&Form – Design Studio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --font-serif: 'Cormorant Garamond', serif;
+      --font-sans: 'Outfit', sans-serif;
+      --color-bg: #fdfaf6;
+      --color-text: #3c2f2f;
+      --color-accent: #b58e6f;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text);
+      background-color: var(--color-bg);
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://www.transparenttextures.com/patterns/beige-paper.png');
+      padding: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      color: var(--color-text);
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--color-text);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--color-accent);
+    }
+
+    .hero {
+      background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.95)), url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      background-size: cover;
+      padding: 8rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--color-accent);
+      color: white;
+      border-radius: 5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .btn:hover {
+      background: #a57759;
+    }
+
+    section {
+      padding: 6rem 2rem;
+    }
+
+    .intro {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      color: #5e4b4b;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">Brand&Form</h1>
-      <nav class="nav">
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <div class="logo">Brand&Form</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <section class="hero">
-    <div class="container">
-      <h2>Where Identity Meets Execution</h2>
-      <p>Elegant branding, web design, and digital foundations tailored to elevate your business.</p>
-      <a href="#contact" class="btn">Start Your Project</a>
-    </div>
+    <h1>Crafting Brands with Purpose & Poise</h1>
+    <p>From custom logos to modern websites and strategic domain identity, we build your visual foundation with elegance.</p>
+    <a href="#contact" class="btn">Let's Work Together</a>
   </section>
 
-  <section id="services" class="services">
-    <div class="container">
-      <h3>Our Services</h3>
-      <div class="service-grid">
-        <div class="service-box">
-          <h4>Brand Identity</h4>
-          <p>Logos, color palettes, typography, and brand kits that speak clearly to your audience.</p>
-        </div>
-        <div class="service-box">
-          <h4>Web Design</h4>
-          <p>Modern, responsive websites — 1 to 5 page setups with mobile-first layouts.</p>
-        </div>
-        <div class="service-box">
-          <h4>Domain & Email</h4>
-          <p>Custom domain and email setup to give your business a professional presence online.</p>
-        </div>
-      </div>
-    </div>
+  <section class="intro">
+    <h2>Designed to Elevate</h2>
+    <p>Every pixel and palette we choose is rooted in clarity and sophistication. Explore our custom design services tailored to modern creators and refined businesses.</p>
   </section>
-
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-      <h3>Portfolio Highlights</h3>
-      <p>Selected work from mock clients and concept projects. Real visuals, real results.</p>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">Juniper Cafe (branding)</div>
-        <div class="portfolio-item">Train & Thrive (website)</div>
-        <div class="portfolio-item">LOUMA (logo + identity)</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="about">
-    <div class="container">
-      <h3>About Brand&Form</h3>
-      <p>Founded to provide design-first solutions for small businesses, Brand&Form bridges the gap between polished branding and functional digital tools. We believe in elegance, clarity, and execution.</p>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <h3>Start Your Project</h3>
-      <p>Email us at <a href="mailto:hello@brandandform.com">hello@brandandform.com</a> or message us on Instagram <strong>@brandandform</strong>.</p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Brand&Form. All rights reserved.</p>
-    </div>
-  </footer>
 </body>
 </html>
