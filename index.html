@@ -4,21 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brand&Form</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div class="branding">
       <img src="logo.png" alt="Brand&Form Logo" class="logo" />
-      <h1 class="brand-name">BRAND & FORM</h1>
+      <h1 class="brand-name">Brand&Form</h1>
     </div>
     <nav class="navbar">
       <a href="#">Home</a>
       <a href="#">Web Design</a>
       <a href="#">Logo Design</a>
       <a href="#">Consulting</a>
-      <a href="#">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
@@ -29,21 +29,23 @@
     </section>
 
     <section class="zigzag">
-      <div class="zig left">
+      <div class="zig row left">
         <img src="img1.jpg" alt="Web Design Example" class="zig-image" />
         <div class="zig-text">
           <h3>Web Design & Development</h3>
           <p>Secure, scalable, and modern websites. Optimized for performance and user experience.</p>
         </div>
       </div>
-      <div class="zig right">
+
+      <div class="zig row right">
         <img src="img2.jpg" alt="Logo Design" class="zig-image" />
         <div class="zig-text">
           <h3>Logo & Branding</h3>
           <p>Visual identity that resonates. Your brand deserves clarity, strategy, and polish.</p>
         </div>
       </div>
-      <div class="zig left">
+
+      <div class="zig row left">
         <img src="img3.jpg" alt="Online Consulting" class="zig-image" />
         <div class="zig-text">
           <h3>Online Consulting</h3>
@@ -55,9 +57,38 @@
     <section class="cta">
       <h2>Let’s Launch Something Great</h2>
       <p>Message us today to get started with Brand&Form.</p>
-      <a href="#" class="cta-button">Contact Now</a>
+      <a href="contact.html" class="cta-button">Contact Now</a>
     </section>
   </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Brand&Form Logo" class="footer-logo" />
+        <h3>BRAND & FORM</h3>
+        <p>Design, identity, and web solutions for modern brands.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Logo Design</a></li>
+          <li><a href="#">Consulting</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: hello@brandform.io</p>
+        <p>Chicago, IL</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Brand&Form. All rights reserved.</p>
+    </div>
+  </footer>
 
   <!-- Promo Banner -->
   <div class="promo-banner">
@@ -66,7 +97,7 @@
     </div>
   </div>
 
-  <!-- Scroll Animation Script -->
+  <!-- Scroll Animation -->
   <script>
     const zigs = document.querySelectorAll('.zig');
     const observer = new IntersectionObserver(entries => {
@@ -77,9 +108,7 @@
       });
     }, { threshold: 0.2 });
 
-    zigs.forEach(box => {
-      observer.observe(box);
-    });
+    zigs.forEach(box => observer.observe(box));
   </script>
 </body>
 </html>
