@@ -199,11 +199,11 @@ header {
 .promo-text {
   display: inline-block;
   white-space: nowrap;
-  animation: scroll-left 25s linear infinite;
+  animation: scroll-right 30s linear infinite;
   padding-right: 100%;
 }
 
-@keyframes scroll-left {
+@keyframes scroll-right {
   0% {
     transform: translateX(100%);
   }
