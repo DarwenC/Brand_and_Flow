@@ -41,8 +41,8 @@ header {
 }
 
 .centered-logo {
-  max-width: 48px;
-  max-height: 48px;
+  max-width: 30px;
+  max-height: 30px;
   height: auto;
   margin-bottom: 0.3rem;
 }
