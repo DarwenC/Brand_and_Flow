@@ -41,10 +41,11 @@ header {
 }
 
 .centered-logo {
-  max-width: 30px;
-  max-height: 30px;
-  height: auto;
-  margin-bottom: 0.3rem;
+  width: 60px ;
+  height: auto ;
+  max-width: none ;
+  display: block;
+  margin: 0 auto 0.5rem;
 }
 
 .brand-name {
