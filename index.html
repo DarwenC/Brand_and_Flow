@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brand&Form</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
@@ -10,14 +10,14 @@
 <body>
   <header>
     <div class="branding">
-      <img src="logo.png" alt="Brand&Form Logo" class="logo" />
+      <img src="logo.png" alt="Brand&Form Logo" class="centered-logo" />
       <h1 class="brand-name">Brand&Form</h1>
     </div>
     <nav class="navbar">
       <a href="#">Home</a>
-      <a href="#">Web Design</a>
-      <a href="#">Logo Design</a>
-      <a href="#">Consulting</a>
+      <a href="#web-design">Web Design</a>
+      <a href="#logo-design">Logo Design</a>
+      <a href="#consulting">Consulting</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
@@ -25,31 +25,46 @@
   <main>
     <section class="hero">
       <h2>Crafting Digital Experiences with Precision</h2>
-      <p>From clean code to powerful design — we build brands that connect and convert.</p>
+      <p>From clean code to powerful design &mdash; we build brands that connect and convert.</p>
     </section>
 
-    <section class="zigzag">
+    <section class="zigzag" id="web-design">
       <div class="zig row left">
         <img src="img1.jpg" alt="Web Design Example" class="zig-image" />
         <div class="zig-text">
           <h3>Web Design & Development</h3>
           <p>Secure, scalable, and modern websites. Optimized for performance and user experience.</p>
+          <ul>
+            <li>Custom design and code</li>
+            <li>Responsive layouts</li>
+            <li>SEO optimized structure</li>
+          </ul>
         </div>
       </div>
 
-      <div class="zig row right">
+      <div class="zig row right" id="logo-design">
         <img src="img2.jpg" alt="Logo Design" class="zig-image" />
         <div class="zig-text">
           <h3>Logo & Branding</h3>
           <p>Visual identity that resonates. Your brand deserves clarity, strategy, and polish.</p>
+          <ul>
+            <li>Primary and secondary logos</li>
+            <li>Color palette and typography</li>
+            <li>Brand guidelines PDF</li>
+          </ul>
         </div>
       </div>
 
-      <div class="zig row left">
+      <div class="zig row left" id="consulting">
         <img src="img3.jpg" alt="Online Consulting" class="zig-image" />
         <div class="zig-text">
           <h3>Online Consulting</h3>
           <p>Creative guidance tailored to your goals. Book your first session today.</p>
+          <ul>
+            <li>1-on-1 strategy sessions</li>
+            <li>Weekly reports & check-ins</li>
+            <li>Live design feedback & prototyping</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -59,9 +74,40 @@
       <p>Message us today to get started with Brand&Form.</p>
       <a href="contact.html" class="cta-button">Contact Now</a>
     </section>
+
+    <section class="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial">
+        <blockquote>
+          "Brand&Form brought our vision to life with a site that looks amazing and performs even better."
+        </blockquote>
+        <cite>&mdash; Jordan A., Startup Founder</cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          "Our brand has never looked sharper. Their team is responsive, creative, and lightning fast."
+        </blockquote>
+        <cite>&mdash; Melissa G., Small Business Owner</cite>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h4>How long does a typical website project take?</h4>
+        <p>Most websites are completed within 3 to 6 weeks depending on complexity and responsiveness.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What design platforms do you use?</h4>
+        <p>We work in Figma, Illustrator, and Webflow depending on your project needs.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can I request edits after launch?</h4>
+        <p>Yes! We include a 30-day post-launch support window with every project.</p>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div class="footer-brand">
@@ -73,16 +119,17 @@
         <h4>Explore</h4>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Web Design</a></li>
-          <li><a href="#">Logo Design</a></li>
-          <li><a href="#">Consulting</a></li>
+          <li><a href="#web-design">Web Design</a></li>
+          <li><a href="#logo-design">Logo Design</a></li>
+          <li><a href="#consulting">Consulting</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-contact">
         <h4>Contact</h4>
         <p>Email: hello@brandform.io</p>
-        <p>Chicago, IL</p>
+        <p>Location: Chicago, IL</p>
+        <p>Hours: Mon&ndash;Fri, 10am&ndash;6pm</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -93,7 +140,7 @@
   <!-- Promo Banner -->
   <div class="promo-banner">
     <div class="promo-text">
-      ✨ Free Design Consults This Week Only — Let’s Build Something Clean. | 📞 Contact: hello@brandform.io
+      ✨ Free Design Consults This Week Only &mdash; Let’s Build Something Clean. | 📞 Contact: hello@brandform.io
     </div>
   </div>
 
